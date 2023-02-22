@@ -8,6 +8,7 @@
     --first-grey: #B1B1B1;
     --second-grey: #EAEAEA;
     --light-black: #6B7376;
+    --dust: #E5DDD5;
 }
 
 * {
@@ -211,6 +212,8 @@ ul, ol, menu {
 /* Conversazione */
 .conversation {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Testa della conversazione */
@@ -251,4 +254,13 @@ ul, ol, menu {
     font-size: 22px;
     display: flex;
     gap: 20px;
+}
+
+/* Corpo della conversazione */
+.conversation__body {
+    flex-grow: 1;
+    background-color: var(--dust);
+    background-image: url("../img/doodles.jpg");
+    background-position: center;;
+    background-size: contain;
 }
