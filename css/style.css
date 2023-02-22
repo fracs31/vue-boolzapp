@@ -299,3 +299,33 @@ ul, ol, menu {
     background-color: white;
     align-self: flex-start;
 }
+
+/* Piede della conversazione */
+.conversation__footer {
+    background-color: var(--second-grey);
+    padding: 10px 40px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Testo del messaggio */
+.text {
+    flex-grow: 1;
+}
+
+/* Input del testo del messaggio */
+.text__input {
+    width: 100%;
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* Emoji e Audio */
+.emoji,
+.audio {
+    font-size: 22px;
+    color: var(--light-black);
+}
