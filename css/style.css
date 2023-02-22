@@ -17,6 +17,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+ul, ol, menu {
+    list-style-type: none;
+}
+
 /* Container */
 .container {
     max-width: 1400px;
@@ -55,6 +59,8 @@
 /* Chat */
 .chat {
     width: 560px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Profilo */
@@ -145,6 +151,13 @@
     padding: 10px;
     border: 1px solid var(--first-grey);
     flex-grow: 1;
+}
+
+/* Messaggi */
+.messages {
+    background-color: white;
+    flex-grow: 1;
+    overflow-y: scroll;
 }
 
 /* Conversazione */
