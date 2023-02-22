@@ -18,7 +18,7 @@
 
 /* Container */
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0px auto;
 }
 
@@ -44,9 +44,20 @@
 
 /* Boolzapp */
 .boolzapp {
+    margin-top: -125px;
     width: 100%;
     min-height: 700px;
-    background-color: var(---light-black);
-    margin-top: -125px;
-    padding: 50px;
+    display: flex;
+}
+
+/* Chat */
+.chat {
+    width: 560px;
+    background-color: rebeccapurple;
+}
+
+/* Conversazione */
+.conversation {
+    flex-grow: 1;
+    background-color: brown;
 }
