@@ -86,7 +86,7 @@
     color: var(--first-grey);
     font-size: 22px;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 /* Notifiche */
@@ -115,6 +115,36 @@
     color: var(---light-black);
     text-decoration: underline;
     font-size: 14px;
+}
+
+/* Ricerca */
+.search {
+    padding: 10px;
+    background-color: var(--second-grey);
+}
+
+/* Barra di ricerca */
+.search__bar {
+    height: 40px;
+    display: flex;
+}
+
+/* Bottone della barra di ricerca */
+.search__bar--btn {
+    width: 75px;
+    font-size: 16px;
+    background-color: white;
+    color: var(--first-grey);
+    border: 1px solid var(--first-grey);
+    cursor: pointer;
+}
+
+/* Input della barra di ricerca */
+.search__bar--input {
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid var(--first-grey);
+    flex-grow: 1;
 }
 
 /* Conversazione */
