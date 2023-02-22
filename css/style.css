@@ -259,8 +259,43 @@ ul, ol, menu {
 /* Corpo della conversazione */
 .conversation__body {
     flex-grow: 1;
+    overflow-y: scroll;
     background-color: var(--dust);
     background-image: url("../img/doodles.jpg");
     background-position: center;;
     background-size: contain;
+}
+
+/* Contenuto della conversazione */
+.content {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Messaggio */
+.message {
+    width: 330px;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+/* Orario del messaggio */
+.message__time {
+    font-size: 12px;
+    text-align: right;
+    color: var(--light-black);
+}
+
+/* Mittente */
+.sender {
+    background-color: var(--lime);
+    align-self: flex-end;
+}
+
+/* Destinatario */
+.receiver {
+    background-color: white;
+    align-self: flex-start;
 }
