@@ -67,6 +67,7 @@ ul, ol, menu {
 .profile {
     background-color: var(--second-grey);
     padding: 10px 15px;
+    height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -210,6 +211,33 @@ ul, ol, menu {
 /* Conversazione */
 .conversation {
     flex-grow: 1;
-    background-color: brown;
-    overflow-y: auto;
+}
+
+/* Testa della conversazione */
+.conversation__head {
+    background-color: var(--second-grey);
+    padding: 10px 15px;
+    height: 75px;
+}
+
+/* Persona */
+.person {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Immagine della persona */
+.person__img img {
+    width: 55px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 999px;
+}
+
+/* Ultimo accesso */
+.person__info--access {
+    font-size: 14px;
+    color: var(--light-black);
 }
