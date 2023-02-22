@@ -1,4 +1,15 @@
 /* Regole generali */
+:root {
+    --green: #009688;
+    --lime: #D5F9BA;
+    --light-blue: #8EDAFC;
+    --first-white: #D8DBD5;
+    --second-white: #E9EBEB;
+    --first-grey: #B1B1B1;
+    --second-grey: #EAEAEA;
+    ---light-black: #6B7376;
+}
+
 * {
     margin: 0px;
     padding: 0px;
