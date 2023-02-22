@@ -89,6 +89,24 @@
     gap: 15px;
 }
 
+/* Notifiche */
+.notifications {
+    padding: 15px 20px;
+    background-color: var(--light-blue);
+}
+
+/* Immagine delle notifiche */
+.notifications__img {
+    width: 50px;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 999px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    color: var(--light-blue);
+}
+
 /* Conversazione */
 .conversation {
     flex-grow: 1;
