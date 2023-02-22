@@ -93,6 +93,9 @@
 .notifications {
     padding: 15px 20px;
     background-color: var(--light-blue);
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 /* Immagine delle notifiche */
@@ -105,6 +108,13 @@
     line-height: 50px;
     font-size: 22px;
     color: var(--light-blue);
+}
+
+/* Attivazione delle notifiche */
+.notifications__hint--able {
+    color: var(---light-black);
+    text-decoration: underline;
+    font-size: 14px;
 }
 
 /* Conversazione */
