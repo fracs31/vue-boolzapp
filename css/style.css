@@ -218,6 +218,9 @@ ul, ol, menu {
     background-color: var(--second-grey);
     padding: 10px 15px;
     height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Persona */
@@ -240,4 +243,12 @@ ul, ol, menu {
 .person__info--access {
     font-size: 14px;
     color: var(--light-black);
+}
+
+/* Azioni della conversazione */
+.conversation__head--actions {
+    color: var(--first-grey);
+    font-size: 22px;
+    display: flex;
+    gap: 20px;
 }
