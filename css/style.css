@@ -48,12 +48,12 @@
     width: 100%;
     min-height: 700px;
     display: flex;
+    border: 1px solid black;
 }
 
 /* Chat */
 .chat {
     width: 560px;
-    background-color: rebeccapurple;
 }
 
 /* Conversazione */
