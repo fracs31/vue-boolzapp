@@ -16,6 +16,12 @@
     box-sizing: border-box;
 }
 
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
 /* App */
 .app {
     height: 100vh;
@@ -34,4 +40,13 @@
 .main-content {
     background-color: var(--first-white);
     flex-grow: 1;
+}
+
+/* Boolzapp */
+.boolzapp {
+    width: 100%;
+    min-height: 700px;
+    background-color: var(---light-black);
+    margin-top: -125px;
+    padding: 50px;
 }
