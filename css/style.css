@@ -7,7 +7,7 @@
     --second-white: #E9EBEB;
     --first-grey: #B1B1B1;
     --second-grey: #EAEAEA;
-    ---light-black: #6B7376;
+    --light-black: #6B7376;
 }
 
 * {
@@ -51,7 +51,7 @@ ul, ol, menu {
 .boolzapp {
     margin-top: -125px;
     width: 100%;
-    min-height: 700px;
+    height: 700px;
     display: flex;
     border: 1px solid black;
 }
@@ -118,7 +118,7 @@ ul, ol, menu {
 
 /* Attivazione delle notifiche */
 .notifications__hint--able {
-    color: var(---light-black);
+    color: var(--light-black);
     text-decoration: underline;
     font-size: 14px;
 }
@@ -126,7 +126,7 @@ ul, ol, menu {
 /* Ricerca */
 .search {
     padding: 10px;
-    background-color: var(--second-grey);
+    background-color: var(--second-white);
 }
 
 /* Barra di ricerca */
@@ -160,8 +160,56 @@ ul, ol, menu {
     overflow-y: scroll;
 }
 
+/* Elemento della lista dei messaggi */
+.list-item {
+    border-bottom: 1px solid var(--first-grey);
+}
+
+.active {
+    background-color: var(--first-white);
+}
+
+/* Carta */
+.card {
+    padding: 10px 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* Immagine della carta */
+.card__img img {
+    width: 65px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 999px;
+}
+
+/* Informazioni della carta */
+.card__info {
+    flex-grow: 1;
+}
+
+/* Nome della carta */
+.card__info--name {
+    font-size: 18px;
+}
+
+/* Testo della carta */
+.card__info--text {
+    font-size: 14px;
+    color: var(--first-grey);
+}
+
+/* Tempo della carta */
+.card__time {
+    font-size: 14px;
+    color: var(--first-grey);
+}
+
 /* Conversazione */
 .conversation {
     flex-grow: 1;
     background-color: brown;
+    overflow-y: auto;
 }
