@@ -92,45 +92,19 @@
                             <!-- Lista dei messaggi -->
                             <ul class="list">
                                 <!-- Elemento della lista -->
-                                <li class="list-item active">
+                                <li class="list-item" v-for="(contact, i) in contacts">
                                     <!-- Carta -->
                                     <div class="card">
                                         <!-- Immagine della carta -->
                                         <div class="card__img">
                                             <!-- Immagine -->
-                                            <img src="./img/michele.jpg" alt="Michele">
+                                            <img v-bind:src="contact.avatar" v-bind:alt="contact.name">
                                         </div>
                                         <!-- Informazioni della carta -->
                                         <div class="card__info">
                                             <!-- Nome -->
                                             <div class="card__info--name">
-                                                Michele
-                                            </div>
-                                            <!-- Testo -->
-                                            <div class="card__info--text">
-                                                Ultimo messaggio inviato
-                                            </div>
-                                        </div>
-                                        <!-- Tempo -->
-                                        <div class="card__time">
-                                            12:00
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- Elemento della lista -->
-                                <li class="list-item">
-                                    <!-- Carta -->
-                                    <div class="card">
-                                        <!-- Immagine della carta -->
-                                        <div class="card__img">
-                                            <!-- Immagine -->
-                                            <img src="./img/fabio.jpg" alt="Fabio">
-                                        </div>
-                                        <!-- Informazioni della carta -->
-                                        <div class="card__info">
-                                            <!-- Nome -->
-                                            <div class="card__info--name">
-                                                Fabio
+                                                {{ contact.name }}
                                             </div>
                                             <!-- Testo -->
                                             <div class="card__info--text">
@@ -155,7 +129,7 @@
                                 <!-- Immagine della persona -->
                                 <div class="person__img">
                                     <!-- Immagine -->
-                                    <img src="./img/michele.jpg" alt="Michele">
+                                    <img src="./img/avatar_1.jpg" alt="Michele">
                                 </div>
                                 <!-- Informazioni della persona -->
                                 <div class="person__info">
