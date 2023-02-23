@@ -28,8 +28,8 @@ ul, ol, menu {
     margin: 0px auto;
 }
 
-/* App */
-.app {
+/* Body */
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
