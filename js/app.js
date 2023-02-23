@@ -172,7 +172,8 @@ createApp({
             keepActive: 0, //indice che si salva la vecchia chat attiva per poter inviare il messaggio correttamente, anche se si ha cambiato conversazione 
             newMessage: "", //nuovo messaggio
             searchValue: "", //valore della barra di ricerca
-            searchInProgress: false //ricerca in corso
+            searchInProgress: false, //ricerca in corso
+            displayOptions: false
         }
     },
     //Metodi
