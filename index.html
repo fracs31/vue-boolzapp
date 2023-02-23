@@ -193,10 +193,23 @@
                             <!-- Contenuto della conversazione -->
                             <ul class="content">
                                 <!-- Messaggio -->
-                                <li class="message" v-for="(content) in contacts[currentActive].messages" v-bind:class="(content.status === 'sent') ? 'sender' : 'receiver'">
-                                    <!-- Contentuto -->
+                                <li class="message" v-for="(content, i) in contacts[currentActive].messages" v-bind:class="(content.status === 'sent') ? 'sender' : 'receiver'">
+                                    <!-- Contenuto -->
                                     <div class="message__content">
-                                        {{ content.message }}
+                                        <!-- Testo -->
+                                        <div class="message__content--text">
+                                            {{ content.message }}
+                                        </div>
+                                        <!-- Bottone -->
+                                        <div class="message__btn">
+                                            <!-- Icona -->
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                            <!-- Opzioni -->
+                                            <ul class="message__options">
+                                                <!-- Cancella il messaggio -->
+                                                <li class="message__options--delete" v-on:click="deleteMessage(i)">Cancella il messaggio</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <!-- Orario -->
                                     <div class="message__time">

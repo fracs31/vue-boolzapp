@@ -285,6 +285,40 @@ body {
 /* Contenuto del messaggio */
 .message__content {
     overflow-wrap: break-word;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Bottone del messaggio */
+.message__btn {
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Opzioni del messaggio */
+.message__options {
+    font-size: 14px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: left;
+    border-radius: 4px;
+    width: 200px;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+}
+
+/* Elementi della lista delle opzioni del messaggio */
+.message__options li {
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+/* Elementi della lista delle opzioni del messaggio in hover */
+.message__options li:hover {
+    background-color: var(--dust);
 }
 
 /* Orario del messaggio */

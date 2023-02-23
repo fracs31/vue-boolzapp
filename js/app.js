@@ -225,6 +225,10 @@ createApp({
                     }
                 }
             } 
-        }
+        },
+        //Metodo per cancellare i messaggi
+        deleteMessage(index) {
+            this.contacts[this.currentActive].messages.splice(index, 1); //elimino il messaggio
+        },
     }
 }).mount('#app');
