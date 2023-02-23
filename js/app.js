@@ -170,7 +170,9 @@ createApp({
             ],
             currentActive: 0, //indice della chat attiva
             keepActive: 0, //indice che si salva la vecchia chat attiva per poter inviare il messaggio correttamente, anche se si ha cambiato conversazione 
-            newMessage: "" //nuovo messaggio
+            newMessage: "", //nuovo messaggio
+            searchValue: "", //valore della barra di ricerca
+            searchInProgress: false //ricerca in corso
         }
     },
     //Metodi
@@ -205,6 +207,24 @@ createApp({
             }; 
             this.contacts[this.keepActive].messages.push(receive); //aggiungo il contenuto alla lista dei messaggi
             this.keepActive = 0; //azzero l'indice
+        },
+        //Metodo per cercare la chat
+        searchChat() {
+            //Se la barra non è vuota
+            if (this.searchValue.trim() != "") {
+                this.searchInProgress = true; //ricerca in corso
+                //Ciclo
+                for (let i = 0; i < this.contacts.length; i++) {
+                    let fullName = this.contacts[i].name.toLowerCase(); //nome in piccolo
+                    let search = this.searchValue.toLowerCase(); //nome cercato in piccolo
+                    //Se il nome cercato è presente nella lista dei contatti
+                    if (fullName.includes(search)) {
+                        console.log("---------------------");
+                        console.log(this.contacts[i].name); //stampo il nome
+                        console.log("---------------------");
+                    }
+                }
+            } 
         }
     }
 }).mount('#app');
