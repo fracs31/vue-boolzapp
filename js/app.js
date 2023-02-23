@@ -157,7 +157,7 @@ createApp({
                         },
                         {
                             date: "10/01/2020 15:50:00",
-                            message: "No, l\"ho già mangiata ieri, ordiniamo sushi!",
+                            message: "No, l'ho già mangiata ieri, ordiniamo sushi!",
                             status: "sent"
                         },
                         {
@@ -168,7 +168,8 @@ createApp({
                     ],
                 }
             ],
-            currentActive: 0 //indice della chat attiva
+            currentActive: 0, //indice della chat attiva
+            newMessage: "" //nuovo messaggio
         }
     },
     //Metodi
@@ -176,6 +177,17 @@ createApp({
         //Metodo per impostare la chat attiva
         setActive(index) {
             this.currentActive = index; //imposto l'indice dal contatto cliccato come l'indice della chat attiva
+        },
+        //Metodo per inviare i messaggi
+        sendMessage() {
+            //Nuovo contenuto del messaggio
+            const content = {
+                date: "20:00", //orario
+                message: this.newMessage, //messaggio
+                status: "sent" //stato
+            }
+            this.contacts[this.currentActive].messages.push(content); //aggiungo il contenut alla lista dei messaggi
+            this.newMessage = ""; //azzero il valore del nuovo messaggio
         }
     }
 }).mount('#app');

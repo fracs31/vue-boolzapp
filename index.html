@@ -171,7 +171,7 @@
                                     </div>
                                     <!-- Orario -->
                                     <div class="message__time">
-                                        15:30
+                                        {{ content.date }}
                                     </div>
                                 </li>
                             </ul>
@@ -186,7 +186,7 @@
                             <!-- Testo del messaggio -->
                             <div class="text">
                                 <!-- Input -->
-                                <input class="text__input" type="text" placeholder="Scrivi un messaggio">
+                                <input class="text__input" type="text" placeholder="Scrivi un messaggio" v-model="newMessage" v-on:keyup.enter="sendMessage()">
                             </div>
                             <!-- Audio -->
                             <div class="audio">
