@@ -180,14 +180,25 @@ createApp({
         },
         //Metodo per inviare i messaggi
         sendMessage() {
-            //Nuovo contenuto del messaggio
-            const content = {
+            //Messaggio da inviare
+            const send = {
                 date: "20:00", //orario
                 message: this.newMessage, //messaggio
                 status: "sent" //stato
-            }
-            this.contacts[this.currentActive].messages.push(content); //aggiungo il contenut alla lista dei messaggi
+            };
+            this.contacts[this.currentActive].messages.push(send); //aggiungo il contenuto alla lista dei messaggi
             this.newMessage = ""; //azzero il valore del nuovo messaggio
+            setTimeout(this.receiveMessage, 1000); //ricevo un messaggio finto dopo 1 secondo
+        },
+        //Metodo per ricevere i messaggi
+        receiveMessage() {
+            //Messaggio da ricevere
+            const receive = {
+                date: "20:00", //orario
+                message: "Ok", //messaggio
+                status: "received" //stato
+            }; 
+            this.contacts[this.currentActive].messages.push(receive); //aggiungo il contenuto alla lista dei messaggi
         }
     }
 }).mount('#app');
