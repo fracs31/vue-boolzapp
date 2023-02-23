@@ -121,7 +121,7 @@
                             <!-- Lista dei messaggi -->
                             <ul class="list" v-else>
                                 <!-- Elemento della lista -->
-                                <li class="list-item" v-for="(contact, i) in contacts" v-bind:class="(currentActive === i) ? 'active' : ''" v-on:click="setActive(i)" v-if="(contact.name.toLowerCase().includes(searchValue.toLowerCase()))">
+                                <li class="list-item" v-for="(contact, i) in contacts" v-bind:class="(currentActive === i) ? 'active' : ''" v-on:click="setActive(i)" v-show="(contact.name.toLowerCase().includes(searchValue.toLowerCase()))">
                                     <!-- Carta -->
                                     <div class="card">
                                         <!-- Immagine della carta -->
