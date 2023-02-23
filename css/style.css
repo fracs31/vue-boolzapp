@@ -280,6 +280,11 @@ body {
     padding: 15px;
 }
 
+/* Contenuto del messaggio */
+.message__content {
+    overflow-wrap: break-word;
+}
+
 /* Orario del messaggio */
 .message__time {
     font-size: 12px;
