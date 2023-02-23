@@ -1,6 +1,7 @@
 const { createApp } = Vue; //Vue
 //App
 createApp({
+    //Dati
     data() {
         return {
             //Contatti
@@ -166,7 +167,15 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            currentActive: 0 //indice della chat attiva
+        }
+    },
+    //Metodi
+    methods: {
+        //Metodo per impostare la chat attiva
+        setActive(index) {
+            this.currentActive = index; //imposto l'indice dal contatto cliccato come l'indice della chat attiva
         }
     }
 }).mount('#app');

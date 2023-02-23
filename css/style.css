@@ -166,6 +166,7 @@ body {
     border-bottom: 1px solid var(--first-grey);
 }
 
+/* Classe per la chat attiva */
 .active {
     background-color: var(--first-white);
 }
@@ -175,6 +176,7 @@ body {
     padding: 10px 20px;
     display: flex;
     gap: 20px;
+    cursor: pointer;
 }
 
 /* Immagine della carta */

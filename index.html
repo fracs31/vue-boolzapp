@@ -92,7 +92,7 @@
                             <!-- Lista dei messaggi -->
                             <ul class="list">
                                 <!-- Elemento della lista -->
-                                <li class="list-item" v-for="(contact, i) in contacts">
+                                <li class="list-item" v-for="(contact, i) in contacts" v-bind:class="(currentActive === i) ? 'active' : ''" v-on:click="setActive(i)">
                                     <!-- Carta -->
                                     <div class="card">
                                         <!-- Immagine della carta -->
@@ -129,13 +129,13 @@
                                 <!-- Immagine della persona -->
                                 <div class="person__img">
                                     <!-- Immagine -->
-                                    <img src="./img/avatar_1.jpg" alt="Michele">
+                                    <img v-bind:src="contacts[currentActive].avatar" v-bind:alt="contacts[currentActive].name">
                                 </div>
                                 <!-- Informazioni della persona -->
                                 <div class="person__info">
                                     <!-- Nome -->
                                     <p class="person__info--name">
-                                        Michele
+                                        {{ contacts[currentActive].name }}
                                     </p>
                                     <!-- Ultimo accesso -->
                                     <p class="person__info--access">
@@ -162,41 +162,19 @@
                         <!-- Corpo della conversazione -->
                         <div class="conversation__body">
                             <!-- Contenuto della conversazione -->
-                            <div class="content">
+                            <ul class="content">
                                 <!-- Messaggio -->
-                                <div class="message sender">
+                                <li class="message" v-for="(content) in contacts[currentActive].messages" v-bind:class="(content.status === 'sent') ? 'sender' : 'receiver'">
                                     <!-- Contentuto -->
                                     <div class="message__content">
-                                        Hai portato a spasso il cane?
+                                        {{ content.message }}
                                     </div>
                                     <!-- Orario -->
                                     <div class="message__time">
                                         15:30
                                     </div>
-                                </div>
-                                <!-- Messaggio -->
-                                <div class="message sender">
-                                    <!-- Contentuto -->
-                                    <div class="message__content">
-                                        Ricordati di stendere i panni
-                                    </div>
-                                    <!-- Orario -->
-                                    <div class="message__time">
-                                        15:50
-                                    </div>
-                                </div>
-                                <!-- Messaggio -->
-                                <div class="message receiver">
-                                    <!-- Contentuto -->
-                                    <div class="message__content">
-                                        Tutto fatto!
-                                    </div>
-                                    <!-- Orario -->
-                                    <div class="message__time">
-                                        16:15
-                                    </div>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
                         </div>
                         <!-- Piede della conversazione -->
                         <div class="conversation__footer">
