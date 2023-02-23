@@ -181,16 +181,19 @@ createApp({
         },
         //Metodo per inviare i messaggi
         sendMessage() {
-            //Messaggio da inviare
-            const send = {
-                date: "20:00", //orario
-                message: this.newMessage, //messaggio
-                status: "sent" //stato
-            };
-            this.contacts[this.currentActive].messages.push(send); //aggiungo il contenuto alla lista dei messaggi
-            this.keepActive = this.currentActive; //salvo l'indice della chat attiva
-            this.newMessage = ""; //azzero il valore del nuovo messaggio
-            setTimeout(this.receiveMessage, 1000); //ricevo un messaggio finto dopo 1 secondo
+            //Se il messaggio non è vuoto
+            if (this.newMessage.trim() != "") {
+                //Messaggio da inviare
+                const send = {
+                    date: "20:00", //orario
+                    message: this.newMessage, //messaggio
+                    status: "sent" //stato
+                };
+                this.contacts[this.currentActive].messages.push(send); //aggiungo il contenuto alla lista dei messaggi
+                this.keepActive = this.currentActive; //salvo l'indice della chat attiva
+                this.newMessage = ""; //azzero il valore del nuovo messaggio
+                setTimeout(this.receiveMessage, 1000); //ricevo un messaggio finto dopo 1 secondo
+            }
         },
         //Metodo per ricevere i messaggi
         receiveMessage() {
