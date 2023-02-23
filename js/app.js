@@ -169,6 +169,7 @@ createApp({
                 }
             ],
             currentActive: 0, //indice della chat attiva
+            keepActive: 0, //indice che si salva la vecchia chat attiva per poter inviare il messaggio correttamente, anche se si ha cambiato conversazione 
             newMessage: "" //nuovo messaggio
         }
     },
@@ -187,6 +188,7 @@ createApp({
                 status: "sent" //stato
             };
             this.contacts[this.currentActive].messages.push(send); //aggiungo il contenuto alla lista dei messaggi
+            this.keepActive = this.currentActive; //salvo l'indice della chat attiva
             this.newMessage = ""; //azzero il valore del nuovo messaggio
             setTimeout(this.receiveMessage, 1000); //ricevo un messaggio finto dopo 1 secondo
         },
@@ -198,7 +200,8 @@ createApp({
                 message: "Ok", //messaggio
                 status: "received" //stato
             }; 
-            this.contacts[this.currentActive].messages.push(receive); //aggiungo il contenuto alla lista dei messaggi
+            this.contacts[this.keepActive].messages.push(receive); //aggiungo il contenuto alla lista dei messaggi
+            this.keepActive = 0; //azzero l'indice
         }
     }
 }).mount('#app');
