@@ -202,9 +202,11 @@ createApp({
         },
         //Metodo per ricevere i messaggi
         receiveMessage() {
+            let newDate = DateTime.now(); //prendo la data attuale
+            newDate = newDate.toFormat("dd/LL/yyyy HH:mm:ss"); //converto la data attuale
             //Messaggio da ricevere
             const receive = {
-                date: "20:00", //orario
+                date: newDate, //data
                 message: "Ok", //messaggio
                 status: "received" //stato
             }; 
