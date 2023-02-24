@@ -85,42 +85,13 @@
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </button>
                                 <!-- Input -->
-                                <input class="search__bar--input" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchValue" v-on:keyup="searchChat()">
+                                <input class="search__bar--input" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchValue">
                             </div>
                         </div>
                         <!-- Messaggi -->
                         <div class="messages">
                             <!-- Lista dei messaggi -->
-                            <ul class="list" v-if="(!searchInProgress)">
-                                <!-- Elemento della lista -->
-                                <li class="list-item" v-for="(contact, i) in contacts" v-bind:class="(currentActive === i) ? 'active' : ''" v-on:click="setActive(i)">
-                                    <!-- Carta -->
-                                    <div class="card">
-                                        <!-- Immagine della carta -->
-                                        <div class="card__img">
-                                            <!-- Immagine -->
-                                            <img v-bind:src="contact.avatar" v-bind:alt="contact.name">
-                                        </div>
-                                        <!-- Informazioni della carta -->
-                                        <div class="card__info">
-                                            <!-- Nome -->
-                                            <div class="card__info--name">
-                                                {{ contact.name }}
-                                            </div>
-                                            <!-- Testo -->
-                                            <div class="card__info--text">
-                                                Ultimo messaggio inviato
-                                            </div>
-                                        </div>
-                                        <!-- Tempo -->
-                                        <div class="card__time">
-                                            12:00
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <!-- Lista dei messaggi -->
-                            <ul class="list" v-else>
+                            <ul class="list">
                                 <!-- Elemento della lista -->
                                 <li class="list-item" v-for="(contact, i) in contacts" v-bind:class="(currentActive === i) ? 'active' : ''" v-on:click="setActive(i)" v-show="(contact.name.toLowerCase().includes(searchValue.toLowerCase()))">
                                     <!-- Carta -->
