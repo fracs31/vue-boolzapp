@@ -1,4 +1,5 @@
 const { createApp } = Vue; //Vue
+const { DateTime } = luxon; //Luxon
 //App
 createApp({
     //Dati
@@ -185,9 +186,11 @@ createApp({
         sendMessage() {
             //Se il messaggio non è vuoto
             if (this.newMessage.trim() != "") {
+                let newDate = DateTime.now(); //prendo la data attuale
+                newDate = newDate.toFormat("dd/LL/yyyy HH:mm:ss"); //converto la data attuale
                 //Messaggio da inviare
                 const send = {
-                    date: "20:00", //orario
+                    date: newDate, //data
                     message: this.newMessage, //messaggio
                     status: "sent" //stato
                 };
