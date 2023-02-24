@@ -212,6 +212,12 @@ createApp({
             }; 
             this.contacts[this.keepActive].messages.push(receive); //aggiungo il contenuto alla lista dei messaggi
         },
+        //Metodo per convertire la data e ottenere solo l'orario in ore e minuti
+        getOnlyTime(date) {
+            let newDate = DateTime.fromFormat(date , "dd/LL/yyyy HH:mm:ss"); //prendo la data e la converto
+            newDate = newDate.toFormat("HH:mm"); //prendo solo le ore e i minuti
+            return newDate; //restituisco la data convertita
+        },
         //Metodo per cancellare i messaggi
         deleteMessage(index) {
             this.contacts[this.currentActive].messages.splice(index, 1); //elimino il messaggio
