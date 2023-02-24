@@ -221,5 +221,18 @@ createApp({
         deleteMessage(index) {
             this.contacts[this.currentActive].messages.splice(index, 1); //elimino il messaggio
         },
+        //Metodo per mostrare le opzioni del messaggio
+        showOptions(index) {
+            const optionsMessageElement = document.getElementById("msg-" + index); //opzioni del messaggio nel DOM
+            optionsMessageElement.classList.toggle("block"); //mostro o nascondo le opzioni
+        },
+        //Metodo per nascondere le opzioni del messaggio
+        hideOptions() {
+            const optionsMessageElement = document.querySelectorAll(".message__options"); //opzioni del messaggio nel DOM
+            //Ciclo
+            for (let i = 0; i < optionsMessageElement.length; i++) {
+                optionsMessageElement[i].classList.remove("block"); //nascondo tutte le opzioni nel DOM
+            }
+        }
     }
 }).mount('#app');

@@ -95,7 +95,7 @@
                                 <!-- Elemento della lista -->
                                 <li class="list-item" v-for="(contact, i) in contacts" v-bind:class="(currentActive === i) ? 'active' : ''" v-on:click="setActive(i)" v-show="(contact.name.toLowerCase().includes(searchValue.toLowerCase()))">
                                     <!-- Carta -->
-                                    <div class="card">
+                                    <div class="card" v-on:click="hideOptions()">
                                         <!-- Immagine della carta -->
                                         <div class="card__img">
                                             <!-- Immagine -->
@@ -173,11 +173,11 @@
                                             {{ content.message }}
                                         </div>
                                         <!-- Bottone -->
-                                        <div class="message__btn">
+                                        <div class="message__btn" v-on:click="showOptions(i)">
                                             <!-- Icona -->
                                             <i class="fa-solid fa-chevron-down"></i>
                                             <!-- Opzioni -->
-                                            <ul class="message__options">
+                                            <ul class="message__options" v-bind:id="'msg-' + i">
                                                 <!-- Cancella il messaggio -->
                                                 <li class="message__options--delete" v-on:click="deleteMessage(i)">Cancella il messaggio</li>
                                             </ul>
