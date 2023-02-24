@@ -194,7 +194,7 @@
                             <!-- Contenuto della conversazione -->
                             <ul class="content">
                                 <!-- Messaggio -->
-                                <li class="message" v-for="(content, i) in contacts[currentActive].messages" v-bind:class="(content.status === 'sent') ? 'sender' : 'receiver'">
+                                <li class="message" v-for="(content, i) in contacts[currentActive].messages" v-bind:class="content.status">
                                     <!-- Contenuto -->
                                     <div class="message__content">
                                         <!-- Testo -->

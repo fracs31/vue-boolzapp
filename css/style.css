@@ -329,13 +329,13 @@ body {
 }
 
 /* Mittente */
-.sender {
+.sent {
     background-color: var(--lime);
     align-self: flex-end;
 }
 
 /* Destinatario */
-.receiver {
+.received {
     background-color: white;
     align-self: flex-start;
 }
