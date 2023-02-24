@@ -65,6 +65,7 @@ body {
 
 /* Profilo */
 .profile {
+    flex-shrink: 0;
     background-color: var(--second-grey);
     padding: 10px 15px;
     height: 75px;
@@ -98,6 +99,7 @@ body {
 
 /* Notifiche */
 .notifications {
+    flex-shrink: 0;
     padding: 15px 20px;
     background-color: var(--light-blue);
     display: flex;
@@ -126,6 +128,7 @@ body {
 
 /* Ricerca */
 .search {
+    flex-shrink: 0;
     padding: 10px;
     background-color: var(--second-white);
 }
@@ -143,7 +146,6 @@ body {
     background-color: white;
     color: var(--first-grey);
     border: 1px solid var(--first-grey);
-    cursor: pointer;
 }
 
 /* Input della barra di ricerca */
@@ -298,6 +300,7 @@ body {
 
 /* Opzioni del messaggio */
 .message__options {
+    display: none;
     font-size: 14px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -307,6 +310,11 @@ body {
     position: absolute;
     top: 20px;
     right: 0px;
+}
+
+/* Classe per mostrare le opzioni */
+.block {
+    display: block;
 }
 
 /* Elementi della lista delle opzioni del messaggio */

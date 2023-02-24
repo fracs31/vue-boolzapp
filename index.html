@@ -177,7 +177,7 @@
                                             <!-- Icona -->
                                             <i class="fa-solid fa-chevron-down"></i>
                                             <!-- Opzioni -->
-                                            <ul class="message__options" v-if="displayOptions">
+                                            <ul class="message__options" v-bind:class="(displayOptions) ? 'block' : ''">
                                                 <!-- Cancella il messaggio -->
                                                 <li class="message__options--delete" v-on:click="deleteMessage(i)">Cancella il messaggio</li>
                                             </ul>
