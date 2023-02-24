@@ -95,7 +95,7 @@
                                 <!-- Elemento della lista -->
                                 <li class="list-item" v-for="(contact, i) in contacts" v-bind:class="(currentActive === i) ? 'active' : ''" v-on:click="setActive(i)" v-show="(contact.name.toLowerCase().includes(searchValue.toLowerCase()))">
                                     <!-- Carta -->
-                                    <div class="card" v-on:click="hideOptions()">
+                                    <div class="card">
                                         <!-- Immagine della carta -->
                                         <div class="card__img">
                                             <!-- Immagine -->
