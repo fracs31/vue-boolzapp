@@ -173,11 +173,11 @@
                                             {{ content.message }}
                                         </div>
                                         <!-- Bottone -->
-                                        <div class="message__btn" v-on:click="(displayOptions) ? displayOptions = false : displayOptions = true">
+                                        <div class="message__btn">
                                             <!-- Icona -->
                                             <i class="fa-solid fa-chevron-down"></i>
                                             <!-- Opzioni -->
-                                            <ul class="message__options" v-bind:class="(displayOptions) ? 'block' : ''">
+                                            <ul class="message__options">
                                                 <!-- Cancella il messaggio -->
                                                 <li class="message__options--delete" v-on:click="deleteMessage(i)">Cancella il messaggio</li>
                                             </ul>
