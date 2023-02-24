@@ -207,7 +207,6 @@ createApp({
                 status: "received" //stato
             }; 
             this.contacts[this.keepActive].messages.push(receive); //aggiungo il contenuto alla lista dei messaggi
-            this.keepActive = 0; //azzero l'indice
         },
         //Metodo per cercare la chat
         searchChat() {
