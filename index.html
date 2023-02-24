@@ -109,12 +109,12 @@
                                             </div>
                                             <!-- Testo -->
                                             <div class="card__info--text">
-                                                Ultimo messaggio inviato
+                                                {{ contact.messages[(contact.messages.length - 1)].message }}
                                             </div>
                                         </div>
                                         <!-- Tempo -->
                                         <div class="card__time">
-                                            12:00
+                                            {{ getOnlyTime(contact.messages[(contact.messages.length - 1)].date) }}
                                         </div>
                                     </div>
                                 </li>
@@ -178,6 +178,8 @@
                                             <i class="fa-solid fa-chevron-down"></i>
                                             <!-- Opzioni -->
                                             <ul class="message__options" v-bind:id="'msg-' + i">
+                                                <!-- Info del messaggio -->
+                                                <li class="message__options--info">Informazioni</li>
                                                 <!-- Cancella il messaggio -->
                                                 <li class="message__options--delete" v-on:click="deleteMessage(i)">Cancella il messaggio</li>
                                             </ul>
