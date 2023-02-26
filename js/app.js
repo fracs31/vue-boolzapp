@@ -235,7 +235,10 @@ createApp({
         //Metodo per mostrare le opzioni del messaggio
         showOptions(index) {
             const optionsMessageElement = document.getElementById("msg-" + index); //opzioni del messaggio nel DOM
-            optionsMessageElement.classList.toggle("block"); //mostro o nascondo le opzioni
+            //Se il messaggio esiste ancora
+            if (optionsMessageElement != null) {
+                optionsMessageElement.classList.toggle("block"); //mostro o nascondo le opzioni
+            }
         }
     }
 }).mount('#app');
